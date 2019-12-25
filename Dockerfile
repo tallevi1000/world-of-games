@@ -1,3 +1,10 @@
-FROM node:8-alpine
+FROM python:3
 
-RUN apk add -U subversion
+WORKDIR /usr/src/app
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+CMD [ "python", "./Test_phase.py" ]
