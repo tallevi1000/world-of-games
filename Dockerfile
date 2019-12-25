@@ -1,5 +1,3 @@
-FROM python:3
+FROM node:7-alpine
 
-RUN pip instsall Flask
-ADD Test_phase.py
-CMD [ "python", "./Test_phase.py" ]
+RUN apk add -U subversion
