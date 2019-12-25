@@ -1,9 +1,10 @@
 pipeline {
     agent { dockerfile true }
     stages {
-        stage('Test phase') {
+        stage('Test') {
             steps {
-                sh 'date'
+                sh 'node --version'
+                sh 'svn --version'
             }
         }
     }
