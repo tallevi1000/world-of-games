@@ -1,12 +1,9 @@
 pipeline {
-    agent any
+    agent { dockerfile true }
     stages {
-        stage('test') {
-            agent {
-                docker { image 'python:3'}
-            }
+        stage('Test') {
             steps {
-                sh 'date'
+                sh 'pwd'
             }
         }
     }
