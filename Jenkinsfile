@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                bat "dir"
+                echo "hello after the docker"
             }
         }
     }
