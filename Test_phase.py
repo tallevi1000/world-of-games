@@ -1,1 +1,1 @@
-print("this is test phase")
+print("Hello from the container")
